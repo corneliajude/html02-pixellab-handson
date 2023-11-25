@@ -1,0 +1,132 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation 01 */
+.animation01 {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: linear-gradient(90deg, #E30B5C 50%, #E37383 0) right/200% 100%;
+  animation: l21 2s infinite linear;
+}
+
+.animation01::before {
+  content: "Loading...";
+  color: white;
+  padding: 0 5px;
+  background: inherit;
+  background-image: linear-gradient(90deg, #E37383 50%, #E30B5C 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes l21 {
+  100% {
+    background-position: left
+  }
+}
+
+/* Animation02 */
+.animation02 {
+  width: 150px;
+  height: 75px;
+  border-radius: 200px 200px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.animation02:before {
+  content: "";
+  position: absolute;
+  inset: 0 0 -100%;
+  background: radial-gradient(farthest-side at top, #0000 35%, #aa47be, #039be6, #26c6dc, #459e44, #f9ec44, #f68524, #fa3536, #0000) bottom/100% 50% no-repeat;
+  animation: l8 3s infinite;
+}
+
+@keyframes l8 {
+
+  0%,
+  20% {
+    transform: rotate(0)
+  }
+
+  40%,
+  60% {
+    transform: rotate(.5turn)
+  }
+
+  80%,
+  100% {
+    transform: rotate(1turn)
+  }
+}
+
+/* Animation03 */
+.bgr-color {
+  background-color: #E30B5C;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.animation03 {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.animation03:before,
+.animation03:after {
+  content: "";
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/12px 12px no-repeat #fff;
+  animation: l5 3s infinite;
+}
+
+@keyframes l5 {
+
+  0%,
+  11% {
+    background-position: 35% 35%
+  }
+
+  14%,
+  36% {
+    background-position: 65% 35%
+  }
+
+  38%,
+  61% {
+    background-position: 65% 65%
+  }
+
+  64%,
+  86% {
+    background-position: 35% 65%
+  }
+
+  88%,
+  100% {
+    background-position: 35% 35%
+  }
+}
