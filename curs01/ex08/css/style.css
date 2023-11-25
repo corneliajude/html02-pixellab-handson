@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
-@mixin square() {
+.square, .square-purple, .square-peru, .square-magenta {
   display: block;
   width: 200px;
   height: 200px;
@@ -15,24 +15,16 @@
   background: turquoise;
 }
 
-@mixin squareBg($color: aqua) {
-  background: $color;
-}
-
-.square {
-  @include square();
-}
-
 .square-magenta {
-  @include squareBg(magenta);
+  background: magenta;
 }
 
 .square-peru {
-  @include squareBg(peru);
+  background: peru;
 }
 
 .square-purple {
-  @include squareBg(purple);
+  background: purple;
 }
 
 .circles {
@@ -45,7 +37,7 @@
   justify-content: space-between;
 }
 
-@mixin circle() {
+.circle {
   width: 200px;
   height: 200px;
   border: 3px solid red;
@@ -53,30 +45,20 @@
   background: purple;
 }
 
-@mixin circleBg($color: red) {
-  background: $color;
-}
-
-@mixin circle-border($width: 3px, $color: blue) {
-  border: $width solid $color;
-}
-
-.circle {
-  @include circle();
-}
-
 .circle-red {
-  @include circleBg();
+  background: red;
 }
 
 .circle-border-blue {
-  @include circle-border();
+  border: 3px solid blue;
 }
 
 .circle-green {
-  @include circleBg(green);
+  background: green;
 }
 
 .circle-blue {
-  @include circleBg(blue);
+  background: blue;
 }
+
+/*# sourceMappingURL=style.css.map */
